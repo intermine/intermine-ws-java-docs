@@ -35,7 +35,7 @@ import org.json.JSONObject;
 
 /**
  * The GenesFinder is an example of using a specific web-service, in this case the Genomic
- * Region search service (See <a href="http://www.intermine.org/wiki/WebService">The Web-Service Listing</a>).
+ * Region search service.
  *
  *
  * This service finds features located in specific genomic regions and provides results
@@ -48,7 +48,7 @@ import org.json.JSONObject;
 public class GenesFinder
 {
     private static final String PROG_NAME = "GenesFinder-v2.0";
-    private static final String ROOT_URL = "http://www.flymine.org/query/service";
+    private static final String ROOT_URL = "http://www.flymine.org/flymine/service";
     private static final String NL = System.getProperty("line.separator");
     private static final String USAGE =
             "GenesFinder: Use the InterMine Region Search to find Features" + NL

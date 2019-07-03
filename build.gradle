@@ -11,7 +11,6 @@ buildscript {
 
 apply plugin: 'java'
 apply plugin: 'maven'
-apply plugin: 'com.jfrog.bintray'
 
 group 'org.intermine'
 version '3.0.0'
@@ -26,6 +25,7 @@ repositories {
 }
 
 dependencies {
+  compile group: "org.intermine", name: "intermine-java-client", version: "3.0.0"
   compile group: "org.intermine", name: "intermine-pathquery", version: System.getProperty("imVersion")
   compile group: "org.intermine", name: "intermine-webapp", version: System.getProperty("imVersion")
   compile group: "org.intermine", name: "intermine-model", version: System.getProperty("imVersion")
@@ -35,47 +35,9 @@ dependencies {
   testCompile group: 'junit', name: 'junit', version: '4.8.2'
 }
 
-task myJavadocs(type: Javadoc) {
-    source = sourceSets.main.allJava
+task execute(type:JavaExec) {
+  main = mainClass
+  classpath = sourceSets.main.runtimeClasspath
 }
-
-task sourcesJar(type: Jar, dependsOn: classes) {
-  classifier = 'sources'
-  from sourceSets.main.allSource
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-  classifier = 'javadoc'
-  from javadoc.destinationDir
-}
-
-artifacts {
-  archives sourcesJar
-  archives javadocJar
-}
-
-bintray {
-  user = System.getenv('BINTRAY_USER')
-  key = System.getenv('BINTRAY_KEY')
-  dryRun = false //[Default: false] Whether to run this as dry-run, without deploying
-  publish = true //[Default: false] Whether version should be auto published after an upload
-  override = true //[Default: false] Whether to override version artifacts already published
-  pkg {
-    repo = 'intermine'
-    name = project.name
-    userOrg = user
-    licenses = ['LGPL-2.1']
-    vcsUrl = 'https://github.com/intermine/intermine-ws-java.git'
-    publicDownloadNumbers = true
-    version {
-      name = '3.0.0'
-      desc = 'InterMine 3.0.0'
-      vcsTag = 'java-client-3.0.0'
-    }
-  }
-
-  configurations = ['archives']
-}
-
 
 
