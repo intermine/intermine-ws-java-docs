@@ -34,7 +34,7 @@ import org.intermine.client.services.ListService;
  **/
 public class ListClient
 {
-    private static final String serviceRootUrl = "http://www.flymine.org/query/service";
+    private static final String serviceRootUrl = "http://beta.flymine.org/beta/service";
     private static final String format = "%-35s %-10d %s\n";
     private static final String headerFormat = "%-35s %-10s %s\n";
 
