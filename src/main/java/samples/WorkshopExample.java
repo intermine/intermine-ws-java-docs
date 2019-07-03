@@ -29,11 +29,11 @@ import org.intermine.client.services.TemplateService;
 import org.intermine.client.template.TemplateParameter;
 
 /**
- * An example web service query to be extended in the !InterMine workshop tutorial.
+ * An example web service query to be extended in the InterMine workshop tutorial.
  **/
 public class WorkshopExample
 {
-    private static final String ROOT_URL = "http://www.flymine.org/flymine/service";
+    private static final String ROOT_URL = "http://beta.flymine.org/beta/service";
     private static final ServiceFactory FACTORY = new ServiceFactory(ROOT_URL);
     private static final String FORMAT = "%-13s | %8s | %-11s | %s\n";
     private static final String DIVIDER = StringUtils.repeat("-", 70);

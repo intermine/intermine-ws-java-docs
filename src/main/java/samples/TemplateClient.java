@@ -32,7 +32,7 @@ import org.intermine.client.services.TemplateService;
  **/
 public class TemplateClient
 {
-    private static final String serviceRootUrl = "http://www.flymine.org/query/service";
+    private static final String serviceRootUrl = "http://www.flymine.org/flymine/service";
     private static final String templateName = "Pathway_Genes";
     private static final String pathway = "ABC transporters";;
     private static final ServiceFactory services = new ServiceFactory(serviceRootUrl);

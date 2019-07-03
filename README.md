@@ -35,13 +35,15 @@ saved as "examplequery/QueryClient.java" you can use either:
 
 You can also include the library in your own programs by adding it to your classpath:
 
+```
+
 <!-- https://bintray.com/intermineorg/java-client-->
 <dependency>
     <groupId>org.intermine</groupId>
     <artifactId>java-client</artifactId>
     <version>3.0.0</version>
 </dependency>
-
+```
 
 
 Samples Overview
