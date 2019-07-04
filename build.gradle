@@ -20,13 +20,12 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
   
 repositories {
-  mavenLocal()
   jcenter()
   mavenCentral()
 }
 
 dependencies {
-  compile group: "org.intermine", name: "intermine-java-client", version: "3.0.0"
+  compile 'org.intermine:intermine-ws-java:3.0.0'
   compile group: "org.intermine", name: "intermine-pathquery", version: System.getProperty("imVersion")
   compile group: "org.intermine", name: "intermine-webapp", version: System.getProperty("imVersion")
   compile group: "org.intermine", name: "intermine-model", version: System.getProperty("imVersion")
