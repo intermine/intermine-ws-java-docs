@@ -23,15 +23,11 @@ https://intermine.readthedocs.io/en/latest/web-services/
 Running A Query
 ---------------
 
-We provide a convenience script to make running your queries
-easier - called "compile-run.sh". To run a query, 
-saved as "examplequery/QueryClient.java" you can use either:
+To run your queries:
 
-  ./compile-run.sh examplequery/QueryClient.java
-
-  or
-
-  ./compile-run.sh examplequery.QueryClient
+```
+  ./gradlew execute -PmainClass=samples.WorkshopExample
+```
 
 You can also include the library in your own programs by adding it to your classpath:
 

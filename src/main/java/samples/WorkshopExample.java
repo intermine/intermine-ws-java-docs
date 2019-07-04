@@ -47,17 +47,17 @@ public class WorkshopExample
         QueryService service = FACTORY.getQueryService();
 
         PathQuery query = new PathQuery(FACTORY.getModel());
-        query.addViews("Protein.primaryIdentifier", "Protein.molecularWeight",
-                "Protein.genes.symbol", "Protein.proteinDomains.name");
+        query.addViews("Protein.primaryAccession", "Protein.molecularWeight",
+                "Protein.genes.symbol", "Protein.pathways.name");
         query.addOrderBy("Protein.primaryIdentifier", OrderDirection.ASC);
-        query.addConstraint(Constraints.eq("Protein.proteinDomains.name", "*Homeobox*"));
+        query.addConstraint(Constraints.eq("Protein.pathways.name", "Hippo*"));
         query.addConstraint(Constraints.eq("Protein.organism.shortName", "D. melanogaster"));
 
         // Run the query
         Iterator<List<Object>> result = service.getRowListIterator(query);
 
         // Print out a header
-        System.out.printf(FORMAT, "PROTEIN", "WEIGHT", "GENE SYMBOL", "PROTEIN DOMAIN");
+        System.out.printf(FORMAT, "PROTEIN", "WEIGHT", "GENE SYMBOL", "PATHWAY");
         System.out.println(DIVIDER);
 
         // Print out the results
