@@ -60,7 +60,7 @@ public class GenesFinder
             + "   --organism   name, eg: D. melanogaster" + NL
             + "   --format     [gff3, fasta, bed] (default = gff3)" + NL
             + NL
-            + "To see an example, run with the flag: --sample-data";
+            + "To see an example, run with the flag: --args=\"--sample-data\"";
 
     /**
      * @param args command line arguments

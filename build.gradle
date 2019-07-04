@@ -9,6 +9,7 @@ buildscript {
   }
 }
 
+
 apply plugin: 'java'
 apply plugin: 'maven'
 
@@ -38,6 +39,7 @@ dependencies {
 task execute(type:JavaExec) {
   main = mainClass
   classpath = sourceSets.main.runtimeClasspath
+  classpath += files('build')
 }
 
 

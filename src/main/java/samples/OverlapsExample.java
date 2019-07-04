@@ -21,9 +21,8 @@ public class OverlapsExample {
 
     public static void main(String[] args)  {
         if (args.length == 0) {
-            throw new BadRequestException("Please supply some intervals, e.g. \"2L:14615455..14619002\",\n" +
-                    "                            \"2R:5866646..5868384\",\n" +
-                    "                            \"3R:2578486..2580016\"");
+            throw new BadRequestException("Please supply some intervals, e.g." +
+                    "--args=\"2L:14615455..14619002 2R:5866646..5868384 3R:2578486..2580016\"");
         }
         for (String arg: args) {
             System.out.println(arg);
