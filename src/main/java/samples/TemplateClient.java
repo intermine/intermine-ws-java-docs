@@ -11,8 +11,11 @@ package samples;
  */
 
 import java.util.List;
+import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
+import org.intermine.metadata.ClassDescriptor;
+import org.intermine.metadata.Model;
 import org.intermine.pathquery.Constraints;
 import org.intermine.pathquery.PathQuery;
 import org.intermine.template.TemplateQuery;
@@ -34,7 +37,7 @@ public class TemplateClient
 {
     private static final String serviceRootUrl = "http://beta.flymine.org/beta/service";
     private static final String templateName = "Gene_Pathway";
-    private static final String pathway = "ABC transporters";
+    private static final String geneSymbol = "r";
     private static final ServiceFactory services = new ServiceFactory(serviceRootUrl);
     private static final Page page = new Page(0, 10);
     /**
@@ -42,12 +45,14 @@ public class TemplateClient
      * @param args command line arguments
      */
     public static void main(String[] args) {
+        System.setProperty("javax.xml.stream.XMLOutputFactory",
+                "com.sun.xml.internal.stream.XMLOutputFactoryImpl");
 
         TemplateService service = services.getTemplateService();
 
         TemplateQuery template = service.getTemplate(templateName);
         template.replaceConstraint(template.getConstraintForCode("A"),
-                Constraints.eq("Pathway.name", pathway));
+                Constraints.lookup("Gene", geneSymbol, "D. melanogaster"));
 
         FormatInfo f = new FormatInfo(template);
 
