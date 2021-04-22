@@ -1,6 +1,4 @@
-# InterMine Webservice Client 3.0 Examples
-
-3 July 2019
+# InterMine Webservice Client Examples
 
 This Java client library is for use with Web services
 attached to InterMine data-warehouses. It abstracts
