@@ -34,7 +34,7 @@ import org.intermine.client.results.Page;
 public class QueryClient
 {
 
-    private static String serviceRootUrl = "http://www.flymine.org/query/service";
+    private static String serviceRootUrl = "https://www.flymine.org/flymine/service";
     private static final Page page = new Page(0, 10);
 
     /**

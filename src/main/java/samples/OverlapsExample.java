@@ -16,7 +16,7 @@ import org.intermine.client.exceptions.BadRequestException;
 public class OverlapsExample {
     
     private static final String PROG_NAME = "SequenceFeaturesFinder-v2.0";
-    private static final String ROOT_URL = "http://beta.flymine.org/beta/service";
+    private static final String ROOT_URL = "https://beta.flymine.org/flymine/service";
     private static final ServiceFactory FACTORY = new ServiceFactory(ROOT_URL);
 
     public static void main(String[] args)  {

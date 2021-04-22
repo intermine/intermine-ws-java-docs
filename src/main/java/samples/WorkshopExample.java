@@ -33,7 +33,7 @@ import org.intermine.client.template.TemplateParameter;
  **/
 public class WorkshopExample
 {
-    private static final String ROOT_URL = "http://beta.flymine.org/beta/service";
+    private static final String ROOT_URL = "https://beta.flymine.org/flymine/service";
     private static final ServiceFactory FACTORY = new ServiceFactory(ROOT_URL);
     private static final String FORMAT = "%-13s | %8s | %-11s | %s\n";
     private static final String DIVIDER = StringUtils.repeat("-", 70);

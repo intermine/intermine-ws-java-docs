@@ -48,7 +48,7 @@ import org.json.JSONObject;
 public class GenesFinder
 {
     private static final String PROG_NAME = "GenesFinder-v2.0";
-    private static final String ROOT_URL = "http://www.flymine.org/flymine/service";
+    private static final String ROOT_URL = "https://www.flymine.org/flymine/service";
     private static final String NL = System.getProperty("line.separator");
     private static final String USAGE =
             "GenesFinder: Use the InterMine Region Search to find Features" + NL

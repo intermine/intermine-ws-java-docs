@@ -27,7 +27,7 @@ import org.intermine.client.services.QueryService;
  **/
 public class QueryAPIClient
 {
-    private static final String serviceRootUrl = "http://www.flymine.org/query/service";
+    private static final String serviceRootUrl = "https://www.flymine.org/fymine/service";
     private static final String NL = System.getProperty("line.separator");
     private static final String FORMAT = "%-8s | %s" + NL;
     private static final ServiceFactory factory = new ServiceFactory(serviceRootUrl);
